@@ -1,9 +1,9 @@
-# Reimers and Fogaren, (2021)
+# Reimers and Fogaren (2021)
 
 This repository contains the necessary analyses materials for "*Bottom boundary layer, eddy-covariance, oxygen fluxes during winter on the Oregon Shelf*" published in JGR-Oceans by Reimers and Fogaren in 2021. The code within this directory analysis of INSERT in [MATLAB](https://www.mathworks.com/products/matlab.html). While this repository may continue to evolve, a realease (v1.0) was created to maintain a copy of the repository at the time of publication and has been archived: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4150102.svg)](https://doi.org/10.5281/zenodo.4150102)
 
 ## Data Availability Statement
-The EC data sets analyzed here are available from the [BCO-DMO data repository](https://www.bco-dmo.org/dataset/827116).  CTD data are available from R2R cruise [DOI: 10.7284/907983](https://doi.org/10.7284/90783) and R2R cruise [DOI: 10.7284/908627](https://doi.org/10.7284/908627). Ocean Observatories data are available from the [OOI Data Portal](https://oceanobservatories.org/data/).
+The eddy-covariance (EC) data sets analyzed in Reimers and Fogaren 2021 are available from the [BCO-DMO data repository](https://www.bco-dmo.org/dataset/827116). CTD data are available from R2R cruise [DOI: 10.7284/907983](https://doi.org/10.7284/90783) and R2R cruise [DOI: 10.7284/908627](https://doi.org/10.7284/908627). Ocean Observatories data are available from the [OOI Data Portal](https://oceanobservatories.org/data/).
 
 ## Analysis
 MATLAB materials for data analysis and figure production. See **analysis** folder for additional documentation on included files.
