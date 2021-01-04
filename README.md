@@ -1,20 +1,12 @@
-# ECS Observatory Collaboration
+# JGR Oceans, Reimers and Fogaren (2021)
 
-This repository contains all of the necessary analyses and materials for Reimers and Fogaren 2020, "*title here*". Code and data included are for investigation into . The code and data within this directory analysis of INSERT in [MATLAB](https://www.mathworks.com/products/matlab.html). While this repository may continue to evolve, a realease (v1.0) was created to maintain a copy of the repository at the time of publication and has been archived: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4150102.svg)](https://doi.org/10.5281/zenodo.4150102)
+This repository contains all of the necessary analyses and materials for Reimers and Fogaren 2021, "*title here*". Code and data included are for investigation into . The code and data within this directory analysis of INSERT in [MATLAB](https://www.mathworks.com/products/matlab.html). While this repository may continue to evolve, a realease (v1.0) was created to maintain a copy of the repository at the time of publication and has been archived: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4150102.svg)](https://doi.org/10.5281/zenodo.4150102)
 
 ## Data
 Data included in the analyses and figures presented is located at INSERT for download.
 
 ## Analysis
 MATLAB materials for data analysis and figure production. See **analysis** folder for additional documentation on included files.
-
-- **Figure 2**
-  - Datasets:
-    - Met package Data from Pioneer Inshore Surface Mooring*: `CP03ISSMmetpackage.mat`
-    - can be requested via M2M: `M2M_Data_Figure2.m`
-  - Analysis:
-    - `Figure2.m`
-    - or `Figure2.mlx` (live editor)
 
 - **Figure 3**
   - Datasets:
@@ -53,11 +45,6 @@ MATLAB materials for data analysis and figure production. See **analysis** folde
     - CTD Data from the 7 profiler sites: `CP03ISPM_ctd.csv`, `CP02PMUI_ctd.csv`, `CP02PMCI_ctd.csv`, `CP02PMCO_ctd.csv`, `CP01CNPM_ctd.csv`, `CP04OSPM_ctd.csv`, `CP02PMUO_ctd.csv`
    - Analysis:
       - `ProfilerCTD_RequestsAndAnalysis.ipynb`, subsection titled: *Figure 7 - Spatial Variability of 1st Storm*
-
-### Additional Examples for Accessing and Analyzing OOI data
-
-#### `dataAccess.ipynb`
-This notebook walks through searching for instrumentation and datasets at the OOI Coastal Endurance sites.
 
 ## Copying/Running this repository
 #### Local
