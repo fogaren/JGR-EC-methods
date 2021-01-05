@@ -8,7 +8,8 @@ function [Oxfluxes, TKEturb] = waveturb_decomp(ib,Tp,dnewtl,dpnewtl)
 % in JGR-Oceans by Reimers and Fogaren (2021). 
 
 %*** INPUTS:
-% ib = burst number (-)
+% ib = burst number (-), not used in this function, may be used for data 
+%   output purposes
 % Tp = bottom sensed wave period (s) 
 % Data columns for dnewtl and dpnewtl
 %   dnewtl = data after rotation and time lag correction for oxygen 
@@ -26,7 +27,8 @@ function [Oxfluxes, TKEturb] = waveturb_decomp(ib,Tp,dnewtl,dpnewtl)
 %        col 2: Oxygen Flux - Bandpass wave component 
 %        col 3: Oxygen Flux - Phase wave component 
 %        col 4: Oxygen Flux - Turbulent Flux (Total - Phase wave component) 
-% TKEturb: turbulent kinetic energy (cm2 s-2)
+% TKEturb: turbulent kinetic energy (cm2 s-2); calculated from variances
+%   which removed wave components using the phase method 
 
 %%=========================================================================
 
@@ -113,7 +115,7 @@ figure
 loglog(fm,Suu,fWave,Suu_wave,'r-',fInter,Suu_inter','g-x');  
 
 % Linear interpolation of turbulent spectra beneath wave peak
-F = log10(fInter).'; %*** what is the .?
+F = log10(fInter)'; 
 Sl = log10(Suu_inter);
 plot(F,Sl,'x');
 [P(1:2),s] = polyfit(F,Sl,1);
@@ -138,7 +140,7 @@ for b = 1:g
    Suu_wavecomp(b) = (Suu_wave(b) - y(b));  
 end
 %wave fourier component
-Amuu_wave= sqrt((Suu_wavecomp+0j).*(df));
+Amuu_wave = sqrt((Suu_wavecomp+0j).*(df));
 pause
 
 %now for vv    
@@ -249,7 +251,7 @@ wc_wavebandpass = nansum(Swc(waverange)*df);
 uu = nansum(real(Suu)*df);
 uu_alt = nansum(real(Amu.*conj(Amu))); %should match
 uv = nansum(real(Suv)*df);
-uv_alt = sum(real(Amu.*conj(Amv))); % Reason this isn't nansum? 
+uv_alt = nansum(real(Amu.*conj(Amv))); % Reason this isn't nansum? 
 uw = nansum(real(Suw)*df);
 vv = nansum(real(Svv)*df);
 vw = nansum(real(Svw)*df);
