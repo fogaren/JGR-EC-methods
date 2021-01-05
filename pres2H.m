@@ -1,28 +1,24 @@
-function [Hsig,Tp,eta,u,w,dfreq] = pres2H(data,datas,dt,ins_h)
+function [Hsig,Tp] = pres2H(data,datas,dt,ins_h)
 %==========================================================================
 % This code uses near-bottom time series of pressure to compute surface 
 % wave characteristics 
 % Developed by Tuba Ozkan-Haller (2011, unpublished) 
 
 %*** INPUTS:
-% data = 
-% datas = 
-% dt = 
-% ins_h = 
+% data = pressure time series (m) 
+% datas = linear trend of pressure time series (m)
+% dt = time step (s)
+% ins_h = instrument height (m) 
 
-%*** OUTPUS: 
+%*** OUTPUTS: 
 % Hsig = Significant wave height (m)
 % Tp = Wave period (s)
-% eta = 
-% u =
-% w = 
-% dfreq = 
 %==========================================================================
 t = (0:dt:dt*(length(data)-1));
 s = 1./dt;
 pres = data';
 h = datas';
-
+sigma  
 npoints = length(pres);
 
 % Compute the variance which will be checked later for the spectrum:
@@ -49,7 +45,7 @@ acth = mean(h); %water depth at site
 actd = ins_h;
 actzl = acth-actd;
 
-k = wvnum_omvec(acth,w,g);
+k = wvnum_omvec(acth,w,g); % calls function wvnum_omvec.m
 
 %  Keep only those values of wk which are felt at the
 %    gage according to deep water theory:  If the gage is below the
@@ -75,7 +71,7 @@ dfreq = freq(attindex);
 k(lfreq+1:npoints-1) = fliplr(k(1:lfreq-1));
 w(lfreq+1:npoints-1) = fliplr(w(1:lfreq-1));
 
-%   computes pressure attenuation factor Kp
+%   computes pressure attenuation factor (Kp)
 % from the k vector (npoints-1 since mean is removed from freq)
 
 Kp = cosh(k*actd)./cosh(k*acth);
