@@ -12,7 +12,7 @@ function[k] = wvnum_omvec(h,sigma,g)
 % g = gravity (g = 9.81 m/s2)
 
 %*** OUTPUT:
-% k = wavenumber (rad/m)(-)?
+% k = wavenumber (rad/m)
 %==========================================================================
 
 koh = (sigma.^2)*h/g;
