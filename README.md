@@ -9,11 +9,11 @@ The eddy-covariance (EC) data sets analyzed in Reimers and Fogaren 2021 are avai
 ## Analysis
 MATLAB materials for a phase-based method of spectral decomposition to separate wave-induced and turbulence-induced components of velocity and dissolved oxygen in time-series 
 - These functions are applied to 15 min bursts of 8-Hz data after rotation and detrending 
-  - `pres2H.m` This function uses near-bottom time series of pressure to compute surface wave characteristics
+  - `pres2H.m` This function uses near-bottom time series of pressure to compute surface wave characteristics using linear water wave theory
       - Developed by Tuba Ozkan-Haller (2011, unpublished).
   - `waveturb_decomp.m` This function provides code to separate wave and turbulence components of Reynolds Stresses and EC oxygen fluxes by the phase method [(Bricker and Monismith, 2007)]( https://doi.org/10.1175/JTECH2066.1) 
       - Developed by C.E. Reimers (2020).
-  - `wvnum_omvec.m` This function solves for wavenumber using the linear dispersion relation and an interactive Newton-Raphson technique
+  - `wvnum_omvec.m` This function solves for wavenumber using the linear dispersion relation and an iterative Newton-Raphson technique
       - Developed by Tuba Ozkan-Haller (2011, unpublished).
 
 
